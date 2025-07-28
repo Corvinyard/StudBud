@@ -1,0 +1,177 @@
+<html lang="en">
+
+<head>
+    <title>StudBud</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Misc/zawarudo.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@200..800&family=Caprasimo&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@200..800&family=Caprasimo&family=Libertinus+Math&display=swap"
+        rel="stylesheet">
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@200..800&family=Caprasimo&family=Libertinus+Math&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" 
+        rel="stylesheet">
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@200..800&family=Caprasimo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Math&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" 
+        rel="stylesheet">
+
+    <audio src="Misc/ring.mp3" id="ringsound"></audio>
+    <audio src="Misc/p5xchest.mp3" id="p5xchest"></audio>
+</head>
+
+<body>
+
+    <audio id="bg-audio" src="Misc/mariotennismenutheme.mp3" loop></audio>
+    <audio id="summon" src="Misc/personasummon.mp3"></audio>
+    <audio id="zwstart" src="Misc/zawarudostart.mp3"></audio>
+    <audio id="zwstop" src="Misc/zawarudostop.mp3"></audio>
+
+
+
+    <div class="left">
+        <div class="top" id="top">
+
+            <div style="background-color: F5E663; width: 5%; height: 100%; float: left;"
+                class="attchInput">
+
+                <br>
+                <button id="StartButton" onclick="StartButton()" class="startButton">Start</button>
+
+                <button id="EndButton" onclick="EndButton()" class="endButton">End</button><br>
+                <img src="Misc/pause.png" style="width: 50px; margin: 0 auto;" onclick="zaWarudo()" id="pausegling" hidden>
+                <img src="Misc/playicon.webp" style="width: 50px; margin: 0 auto;" id="playgling" onclick="zaWarudo()" hidden>
+                <audio src="Misc/Results.mp3" id="music" loop></audio>
+
+            </div>
+
+            <div id="topScreen">
+
+                <div class="timer" id="bidi"></div>
+                <div id="minutesWorked" style="display: none;"><div>You worked for: </div><button onclick="minutesWorked()" id="b1">?</button><div> minutes!</div><br></div>
+
+                <div id="tasksCompleted" style="display: none;"><div>You completed: </div><button onclick="tasksCompleted()" id="b2">?</button><div> tasks!</div><br></div>
+
+                <div id="message" style="display: none;"><div>Message: </div><button onclick="message()" id="b3">?</button><div> Come again!</div><br></div>
+
+                <div id="mainMenu">
+                    <div style="float: left; width: 50%; height: 100%;">
+                        <label class="phase1boxestext">Work Duration</label>
+                        <input type="text" class="phase1boxes" id="min" placeholder="min" maxlength="3" autocomplete="off" onkeydown="startTime(event)">
+                    </div>
+
+                    <div style="float: left; width: 50%; height: 100%;">
+                        <label class="phase1boxestext">Rest Duration</label>
+                        <input type="text" class="phase1boxes" id="min2" placeholder="min" maxlength="3" autocomplete="off" onkeydown="startTime(event)">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="rainStuff" class="rainStuff">
+
+                <div class="realrain">
+                <label for="rain">Rain</label><input class="rain" type="checkbox" id="rain">
+                <audio src="Misc/rainsound.mp3" id="rainSounds" loop></audio>
+
+                <label for="fire">Fire</label><input class="fire" type="checkbox" id="fire">
+                <audio src="Misc/firesound.mp3" id="fireSounds" loop></audio>
+                </div>
+
+                <div id="repeatFamily">
+                    <div id="repeatOnly">Repeat<input type="text" id="repeat" maxlength="3" autocomplete="off" onkeydown="startTime(event)">times</div>
+                </div>
+
+                <div id="workOrRest"></div>
+
+            </div>
+
+
+        </div>
+
+        <div class="content" id="content">
+
+
+
+            <div class="workStartScreen" id="workStartScreen">
+
+                <div id="workBox" class="workBox"></div>
+
+                <div class="containerbidi">
+                    <div class="workGrandLine">
+                        <br>
+                        <label for="uploadWorkBackground" class="uploadImage">Upload Work image/gif</label>
+                        <input type="file" accept=".jpg, .jpeg, .png, .webp, .gif" id="uploadWorkBackground" hidden>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="restStartScreen" id="restStartScreen">
+
+
+                <div id="restBox" class="restBox"></div>
+
+
+                <div class="restGrandLine">
+                    <br>
+                    <label for="uploadRestBackground" class="uploadImage">Upload Rest image/gif</label>
+                    <input type="file" accept=".jpg, .jpeg, .png, .webp, .gif" id="uploadRestBackground" hidden>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="right" id="right">
+
+        <div class="todorelated" id="todorelated">
+        <div class="divtheobedientvillagers" id="studytoppart">
+            <br>
+            <label class="studygoals-header"><ruby>Goals<rt><i style="color: gray;">Station-1</i></rt></ruby></label>
+
+            <div class="todomenu">
+                <input type="text" id="todoInput" placeholder="Add a to-do..." onkeydown="myFunction(event)">
+            </div>
+        </div>
+
+        <div id="todobox"></div>
+        <div id="nextStation">Head down for Station-2 (music) <br> &darr;</div>
+        </div>
+
+        <div class="musicrelated" id="musicrelated">
+        <div class="musicheader">
+            <br><br>
+            <div class="musicheadertext"><ruby>Music<rt><i style="color: gray;">Station-2</i></rt></ruby></div>
+        </div>
+            <div class="musiclinks">
+                <a href="https://www.youtube.com/watch?v=URoH74X6-OI&t=3761s" target="_blank"><ol>JP City Pop</ol></a>
+                <a href="https://www.youtube.com/watch?v=tvDyyiivXuQ" target="_blank"><ol>Persona</ol></a>
+                <a href="https://www.youtube.com/watch?v=5SnkJi51y3o" target="_blank"><ol>Sonic</ol></a>
+                <a href="https://www.youtube.com/watch?v=GdzrrWA8e7A&t=1596s" target="_blank"><ol>Zelda</ol></a>
+                <a href="https://www.youtube.com/watch?v=AZals4U6Z_I" target="_blank"><ol>Ghibli</ol></a>
+                <a href="https://www.youtube.com/watch?v=ufTeHpHYf-U" target="_blank"><ol>Kirby</ol></a>
+                <a href="https://www.youtube.com/watch?v=YMEblRM4pGc" target="_blank"><ol>Pokemon</ol></a>
+                <a href="https://www.youtube.com/watch?v=gdSE_YysD-U&list=PLyWQSfPr9vOEH68cAYz8JXvGtZACjZzKH" target="_blank"><ol>Pilgrammed</ol></a>
+                <a href="https://www.youtube.com/watch?v=nfodXxZyCRg" target="_blank"><ol>Mario Kart</ol></a>
+                <a href="https://www.youtube.com/watch?v=p7sk7nRWC7k" target="_blank"><ol>Hyper Light Drifter</ol></a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

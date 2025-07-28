@@ -1,0 +1,466 @@
+body{
+    margin: 0;
+    background-color: #BDD358;
+}
+
+.uploadImage {
+    font-family: "Inter", sans-serif;
+    border-radius: 5px;
+    background-color: #F5E663;
+    color: 131515;
+    padding: 8px 12px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    transition: 300ms;
+    width: 35%;
+    border: 2px solid;
+    border-color: #131515;
+}
+
+.uploadImage:hover {
+    transform: scale(0.9);
+    background-color: #131515;
+    color: #F5E663;
+    transition-duration: 750ms;
+    border-color: #F5E663;
+}
+
+.uploadImage:active {
+    background-color: #F5E663;
+    color: 131515;
+    transition: 300ms;
+    border-color: #131515;
+}
+
+.left {
+    width: 85%;
+    float: left;
+}
+
+.right {
+    background-color: #F5E663;
+    width: 15%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.top {
+    height: 20%;
+    background-color: #F5E663;
+}
+
+.content {
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.imageLaws {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.timer {
+    color: #95A3B3;
+    font-size: 110px;
+    text-align: center;
+    font-family: "Merriweather", sans-serif;
+}
+
+.workBox {
+    width: 100%;
+    height: 75%;
+    background-color: #BDD358;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 3px solid;
+    border-color: #131515;
+    transform: scale(0.9);
+}
+
+.restBox {
+    width: 100%;
+    height: 75%;
+    background-color: #BDD358;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 3px solid;
+    border-color: #131515;
+    transform: scale(0.9);
+}
+
+.restStartScreen {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #BDD358;
+    justify-content: center;
+    align-items: center;
+}
+
+.workStartScreen {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #BDD358;
+    justify-content: center;
+    align-items: center;
+}
+
+.workGrandLine {
+    width: 100%;
+    height: 20%;
+    transition: 2000ms;
+}
+.workGrandLine:hover{
+    background-image: url(Misc/persona4study.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+}
+.restGrandLine {
+    width: 100%;
+    height: 20%;
+    transition: 2000ms;
+}
+.restGrandLine:hover{
+    background-image: url(Misc/persona4reading.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+}
+
+button {
+    border-radius: 10px;
+    width: 20%;
+    margin: 0 auto;
+    display: block;
+    border-color: azure;
+    color: azure;
+    background-color: rgb(15, 15, 15);
+    transition: 150ms;
+    font-size: 30px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: "Caprasimo", sans-serif;
+}
+
+button:hover {
+    background-color: azure;
+    color: black;
+    border-color: black;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: black;
+    color: azure;
+    border-color: azure;
+}
+
+.phase1boxestext {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: 131515;
+}
+
+.phase1boxes {
+    font-family: "Merriweather", sans-serif;
+    width: 40%;
+    font-size: 45px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 90px;
+    border: 2px solid;
+    border-color: #2B2C28;
+    background-color: #F5E663;
+    color: 131515;
+    border-radius: 10px;
+}
+
+.rainStuff {
+    background-color: #F5E663;
+    width: 5%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    color: 131515;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.rain {
+    accent-color: rgb(15, 213, 235);
+}
+
+.fire {
+    accent-color: rgb(240, 7, 7);
+}
+
+.rain:hover {
+    transform: scale(0.85);
+}
+
+.fire:hover {
+    transform: scale(0.85);
+}
+
+.startButton {
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    border-color: #AFBE8F;
+    color: #2B2C28;
+    background-color: #AFBE8F;
+    transition: 150ms;
+    font-size: 15px;
+    padding: 5%;
+    font-family: "Inter", sans-serif;
+    font-weight: 650;
+}
+
+.startButton:hover {
+    background-color: #2B2C28;
+    color: #AFBE8F;
+    border-color: #2B2C28;
+    transform: scale(0.9);
+}
+
+.startButton:active {
+    background-color: #AFBE8F;
+    color: #2B2C28;
+    border-color: #2B2C28;
+}
+
+.endButton {
+    border-radius: 10px;
+    width: 90%;
+    border-color: #D7DAE5;
+    color: #2B2C28;
+    background-color: #D7DAE5;
+    transition: 150ms;
+    font-size: 15px;
+    padding: 5%;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 650;
+}
+
+.endButton:hover {
+    background-color: #2B2C28;
+    color: #D7DAE5;
+    border-color: #2B2C28;
+    transform: scale(0.9);
+}
+
+.endButton:active {
+    background-color: #D7DAE5;
+    color: black;
+    border-color: black;
+    transform: scale(0.9);
+}
+
+@keyframes mymove {
+  0% {left: 0px}
+  50% {left: 200px}
+  100% {left: 0px}
+}
+
+#repeat {
+    width: 50%;
+    text-align: center;
+    border: 2px solid;
+    border-color: #2B2C28;
+    background-color: #F5E663;
+    color: 131515;
+    border-radius: 5px;
+    font-family: "Merriweather", sans-serif;
+}
+
+
+#todobox {
+    width: 100%;
+    height: 75%;
+    background-color: #DDE392;
+    overflow: auto;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#nextStation {
+    height: 5%;
+    background-color: #DDE392;
+    text-align: center;
+    font-size: 14px;
+}
+
+#todoinput {
+    height: 50%;
+    float: left;
+    border: 2px solid;
+    border-color: #2B2C28;
+    background-color: #F0F2A6;
+    color: 131515;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#addtodo {
+    margin: 0 auto;
+    display: block;
+    float: left;
+    height: 50%;
+}
+
+
+.todomenu {
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+}
+
+.todolistitem {
+    border-radius: 5px;
+    padding: 5%;
+    margin: 5%;
+    margin: 0 auto;
+    display: block;
+    color: #504B3A;
+    background-color: #AFBE8F;
+    transition: 150ms;
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.todolistitem:hover {
+    background-color: #504B3A;
+    color: #AFBE8F;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.studygoals-header {
+    height: 50%;
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 650;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.divtheobedientvillagers {
+    height: 20%;
+    background-color: #F0F2A6;
+}
+
+#realrain {
+    height: 40%;
+}
+
+#repeatFamily {
+    height: 40%;
+    margin-top: 20%;
+}
+
+#workOrRest {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    height: 20%;
+}
+
+.musicheader {
+    height: 20%;
+    background-color: #F0F2A6;
+}
+
+.musicheadertext {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 650;
+    display: block;
+    margin: 0 auto;
+}
+
+.musiclinks {
+    height: 80%;
+    background-color: #DDE392;
+    overflow: auto;
+}
+
+a {
+    color: #504B3A;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #AFBE8F; 
+}
+::-webkit-scrollbar-thumb {
+  background: #156378; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #646F58; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #495240; 
+}
+
+ol {
+    background-color: #c9ce86;
+    border-radius: 5px;
+    padding: 5%;
+    margin: 5%;
+    text-align: center;
+    transition: 300ms;
+    font-size: 30px;
+    font-weight: 500;
+}
+ol:hover {
+    color: darkslateblue;
+    background-color: #aeb373;
+    transform: scale(0.9);
+}
+
+#topScreen {
+    background-color: #F5E663;
+    width: 90%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    text-align: center;
+}
+
+#pausegling, #playgling {
+    cursor: pointer;
+    transition: 400ms;
+}
+#pausegling:hover, #playgling:hover {
+    transform: scale(0.9);
+}
